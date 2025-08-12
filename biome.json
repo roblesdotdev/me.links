@@ -54,9 +54,7 @@
   },
   "javascript": {
     "formatter": {
-      "semicolons": "asNeeded",
-      "trailingCommas": "all",
-      "jsxQuoteStyle": "single"
+      "enabled": false
     }
   },
   "assist": {
@@ -70,14 +68,10 @@
   "overrides": [
     {
       "includes": ["**/*.astro"],
-      "formatter": {
-        "enabled": false
-      },
       "linter": {
         "rules": {
           "style": {
-            "useConst": "off",
-            "useImportType": "off"
+            "recommended": true
           },
           "correctness": {
             "noUnusedVariables": "off",
