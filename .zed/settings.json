@@ -1,0 +1,11 @@
+{
+  "format_on_save": "on",
+  "languages": {
+    "JSON": {
+      "formatter": { "language_server": { "name": "biome" } }
+    },
+    "Astro": {
+      "language_servers": ["astro-language-server", "..."]
+    }
+  }
+}
