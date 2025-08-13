@@ -5,12 +5,12 @@
   --color-fg: #ffffe3;
   --color-fg-muted: #7e7e72;
 
-  --font-display: 'Melodrama', monospace;
-  --font-sans: 'Satoshi', ui-sans, sans-serif;
+  --font-display: 'Departure Mono', monospace;
+  --font-mono: 'Jetbrains Mono', monospace;
 }
 
 @layer base {
   body {
-    @apply text-fg bg-canvas;
+    @apply text-fg bg-canvas font-mono;
   }
 }
