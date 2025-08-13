@@ -1,14 +1,15 @@
 ---
 import Layout from '~/layouts/Layout.astro'
 
-const desc = 'Description'
+const desc =
+  '👋 Hey there! Here you can find links to my work, personal projects, and more.'
 ---
 
 <Layout>
-  <div class="grid min-h-screen place-content-center">
-    <div class="flex flex-col items-center gap-2">
-      <h1 class="text-xl font-medium">Working</h1>
-      <p>{desc}</p>
+  <div class="grid min-h-screen place-content-center px-4">
+    <div class="mx-auto flex max-w-md flex-col items-center gap-2 text-center">
+      <h1 class="font-display text-xl font-medium">Aldo R. Robles</h1>
+      <p class="text-fg-muted">{desc}</p>
     </div>
   </div>
 </Layout>
