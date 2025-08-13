@@ -1,1 +1,16 @@
 @import 'tailwindcss';
+
+@theme {
+  --color-canvas: #10100e;
+  --color-fg: #ffffe3;
+  --color-fg-muted: #7e7e72;
+
+  --font-display: 'Melodrama', monospace;
+  --font-sans: 'Satoshi', ui-sans, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply text-fg bg-canvas;
+  }
+}
