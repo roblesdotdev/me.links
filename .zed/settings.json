@@ -4,6 +4,13 @@
     "JSON": {
       "formatter": { "language_server": { "name": "biome" } }
     },
+    "TypeScript": {
+      "formatter": { "language_server": { "name": "biome" } },
+      "code_actions_on_format": {
+        "souce.fixAll.biome": true,
+        "source.organizeImports.biome": true
+      }
+    },
     "Astro": {
       "language_servers": ["astro-language-server", "..."]
     }

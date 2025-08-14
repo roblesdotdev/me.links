@@ -1,0 +1,28 @@
+---
+import { Icon } from 'astro-icon/components'
+
+export type Props = {
+  link: {
+    href: string
+    label: string
+    iconName: string
+  }
+}
+
+const { link } = Astro.props
+---
+
+<div class="border-fg-muted/50 text-fg-muted flex w-full border">
+  <a
+    href={link.href}
+    class="flex w-full items-center justify-between px-6 py-4"
+    target="_blank"
+    rel="noreferrer noopener"
+  >
+    <div class="flex items-center gap-3">
+      <Icon name={link.iconName} />
+      <span class="text-sm uppercase">{link.label}</span>
+    </div>
+    <span class="font-display text-lg">↗</span>
+  </a>
+</div>

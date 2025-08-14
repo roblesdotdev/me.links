@@ -10,7 +10,8 @@
     "ignoreUnknown": false
   },
   "formatter": {
-    "enabled": false
+    "enabled": true,
+    "useEditorconfig": true
   },
   "linter": {
     "enabled": true,
@@ -52,17 +53,20 @@
       }
     }
   },
-  "javascript": {
-    "formatter": {
-      "enabled": false
-    }
-  },
   "assist": {
     "enabled": true,
     "actions": {
       "source": {
         "organizeImports": "on"
       }
+    }
+  },
+  "javascript": {
+    "formatter": {
+      "semicolons": "asNeeded",
+      "quoteStyle": "single",
+      "indentStyle": "space",
+      "indentWidth": 2
     }
   },
   "overrides": [

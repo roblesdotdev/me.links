@@ -1,5 +1,6 @@
 import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
+import icon from 'astro-icon'
 
 export default defineConfig({
   server: {
@@ -11,4 +12,5 @@ export default defineConfig({
   devToolbar: {
     enabled: false,
   },
+  integrations: [icon()],
 })
