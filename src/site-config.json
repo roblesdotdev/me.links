@@ -1,4 +1,23 @@
 {
+  "title": "Aldo Robles - Sofware Developer",
+  "description": "This is my website",
+  "author": {
+    "twitter": "@roblesdotdev"
+  },
+  "image": "/og.jpg",
+  "meta": {
+    "keywords": [
+      "Aldo Robles",
+      "Sofware Developer",
+      "Frontend",
+      "Backend",
+      "Android",
+      "React",
+      "Typescript",
+      "Kotlin",
+      "Jetpack Compose"
+    ]
+  },
   "social": [
     {
       "label": "linkedin",
