@@ -20,6 +20,8 @@ const { text } = Astro.props
 </button>
 
 <script>
+  import copy from 'copy-text-to-clipboard'
+
   const btn = document.getElementById('copy-btn')
   const copyIcon = document.getElementById('copy-icon')
   const checkIcon = document.getElementById('check-icon')
@@ -29,48 +31,17 @@ const { text } = Astro.props
     checkIcon?.classList.toggle('hidden', !showCheck)
   }
 
-  async function fallbackCopy(textToCopy: string) {
-    if (!document.queryCommandSupported('copy')) {
-      console.error('fail to copy')
-      return
-    }
-    const textArea = document.createElement('textarea')
-    textArea.value = textToCopy
-    textArea.style.position = 'fixed'
-    textArea.style.left = '-999999px'
-    textArea.style.top = '-999999px'
-    document.body.appendChild(textArea)
-    textArea.focus()
-    textArea.select()
-    try {
-      document.execCommand('copy')
-    } catch (err) {
-      console.error('Fail to copy', err)
-    }
-    document.body.removeChild(textArea)
-  }
-
   async function copyToClip() {
     const textToCopy = btn?.dataset.copyText ?? ''
-    try {
-      if (navigator.clipboard && window.isSecureContext) {
-        await navigator.clipboard.writeText(textToCopy)
-      } else {
-        await fallbackCopy(textToCopy)
-      }
+    const success = copy(textToCopy)
+    if (success) {
       toggleIcons(true)
 
       setTimeout(() => {
         toggleIcons(false)
       }, 1000)
-    } catch (e) {
-      toggleIcons(false)
     }
   }
 
   btn?.addEventListener('click', copyToClip)
-  btn?.addEventListener('touchstart', e => {
-    e.preventDefault()
-    copyToClip()
-  })
 </script>
