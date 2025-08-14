@@ -1,0 +1,24 @@
+---
+import CopyButton from '~/components/CopyButton.astro'
+import { maskEmail } from '~/utils/misc'
+
+export type Props = {
+  email: string
+}
+
+const { email } = Astro.props
+---
+
+<section
+  class="border-fg-muted/50 text-fg-muted w-full border p-4 text-sm uppercase"
+>
+  <div class="flex flex-col gap-2">
+    <h1 class="text-fg">Get in touch</h1>
+    <p>Whether it’s a project or just a hello, I’d love to hear from you.</p>
+  </div>
+
+  <div class="mt-6">
+    <code>{maskEmail(email)}</code>
+    <CopyButton text={maskEmail(email)} />
+  </div>
+</section>

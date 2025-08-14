@@ -1,52 +1,19 @@
 ---
-import { Icon } from 'astro-icon/components'
+import CopyButton from '~/components/CopyButton.astro'
 import Link from '~/components/Link.astro'
 import Layout from '~/layouts/Layout.astro'
-import CopyButton from '~/components/CopyButton.astro'
-
-const links = [
-  { label: 'linkedin', href: 'https://linkedin.com', iconName: 'linkedin' },
-  { label: 'github', href: 'https://github.com', iconName: 'github' },
-  { label: 'twitter(x)', href: 'https://x.com', iconName: 'twitter' },
-  { label: 'instagram', href: 'https://instagram.com', iconName: 'instagram' },
-]
+import EmailSection from '~/sections/EmailSection.astro'
+import HeaderSection from '~/sections/HeaderSection.astro'
+import SocialSection from '~/sections/SocialSection.astro'
+import config from '~/site-config.json'
 ---
 
 <Layout>
   <div class="grid place-items-center gap-12 px-4">
-    <section
-      class="mx-auto flex max-w-md flex-col items-center gap-4 text-center"
-    >
-      <div class="flex flex-col gap-1">
-        <h1 class="text-fg-muted text-sm uppercase">
-          Aldo R. Robles - Software Developer
-        </h1>
-        <h2 class="font-display text-lg uppercase">
-          Building simple solutions for complex problems ♥
-        </h2>
-      </div>
-      <p class="text-fg-muted text-sm uppercase">
-        <span class="font-display text-lg">&rsaquo;</span> Here you’ll find links
-        to my work, personal projects, and more.
-      </p>
-    </section>
-    <section class="grid w-full grid-cols-1 gap-2">
-      {links.map(link => <Link link={link} />)}
-    </section>
-    <section
-      class="border-fg-muted/50 text-fg-muted w-full border p-4 text-sm uppercase"
-    >
-      <div class="flex flex-col gap-2">
-        <h1 class="text-fg">Get in touch</h1>
-        <p>
-          Whether it’s a project or just a hello, I’d love to hear from you.
-        </p>
-      </div>
+    <HeaderSection />
 
-      <div class="mt-6">
-        <code>email@email.com</code>
-        <CopyButton text="demo@email.com" />
-      </div>
-    </section>
+    <SocialSection links={config.social} />
+
+    <EmailSection email={config.email} />
   </div>
 </Layout>

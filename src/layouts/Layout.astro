@@ -1,4 +1,5 @@
 ---
+import Footer from '~/components/Footer.astro'
 import '~/styles/fonts.css'
 import '~/styles/global.css'
 ---
@@ -15,11 +16,6 @@ import '~/styles/global.css'
     <main class="mx-auto max-w-[65ch] flex-1 py-16">
       <slot />
     </main>
-    <footer
-      class="text-fg-muted flex flex-col gap-2 pt-12 pb-8 text-center text-sm uppercase"
-    >
-      <p>&copy; Aldo R. Robles - 2025</p>
-      <p class="text-xs">Tinogasta, Catamarca - Argentina</p>
-    </footer>
+    <Footer />
   </body>
 </html>

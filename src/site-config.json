@@ -1,0 +1,25 @@
+{
+  "social": [
+    {
+      "label": "linkedin",
+      "href": "https://linkedin.com/in/robles-ra",
+      "iconName": "linkedin"
+    },
+    {
+      "label": "github",
+      "href": "https://github.com/roblesdotdev",
+      "iconName": "github"
+    },
+    {
+      "label": "twitter(x)",
+      "href": "https://x.com/roblesdotdev",
+      "iconName": "twitter"
+    },
+    {
+      "label": "instagram",
+      "href": "https://instagram.com/roblesdotdev",
+      "iconName": "instagram"
+    }
+  ],
+  "email": "robles.contactme@gmail.com"
+}
