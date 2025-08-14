@@ -1,0 +1,17 @@
+---
+import Link from '~/components/Link.astro'
+
+export type Props = {
+  links: {
+    label: string
+    href: string
+    iconName: string
+  }[]
+}
+
+const { links } = Astro.props
+---
+
+<section class="grid w-full grid-cols-1 gap-2">
+  {links.map(link => <Link link={link} />)}
+</section>

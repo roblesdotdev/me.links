@@ -21,6 +21,7 @@ const { text } = Astro.props
 
 <script>
   import copy from 'copy-text-to-clipboard'
+  import config from '~/site-config.json'
 
   const btn = document.getElementById('copy-btn')
   const copyIcon = document.getElementById('copy-icon')
@@ -32,7 +33,7 @@ const { text } = Astro.props
   }
 
   async function copyToClip() {
-    const textToCopy = btn?.dataset.copyText ?? ''
+    const textToCopy = config.email
     const success = copy(textToCopy)
     if (success) {
       toggleIcons(true)
