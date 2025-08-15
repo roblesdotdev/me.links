@@ -12,10 +12,12 @@ export type Props = {
 const { link } = Astro.props
 ---
 
-<div class="border-fg-muted/50 text-fg-muted flex w-full border">
+<div
+  class="border-fg-muted/50 text-fg-muted group hover:text-fg/60 flex w-full border transition-colors duration-300"
+>
   <a
     href={link.href}
-    class="flex w-full items-center justify-between px-6 py-4"
+    class="ring-offset-canvas ring-primary flex w-full items-center justify-between px-6 py-4 ring-offset-2 outline-none focus-visible:ring-2"
     target="_blank"
     rel="noreferrer noopener"
   >
